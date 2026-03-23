@@ -65,6 +65,13 @@
             backdrop-filter: blur(16px);
             border-bottom: 1px solid rgba(255,255,255,0.06);
             box-shadow: 0 14px 35px rgba(0,0,0,0.35);
+            color: white !important;
+        }
+
+        .nav-scrolled .serif, 
+        .nav-scrolled div, 
+        .nav-scrolled a {
+            color: white !important;
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -75,62 +82,39 @@
 </head>
 <body class="selection:bg-zinc-200">
 
-    <nav class="nav-shell fixed w-full z-50 px-6 md:px-10 py-6 flex justify-between items-center text-white">
+    <nav class="nav-shell fixed w-full z-50 px-6 md:px-10 py-6 flex justify-between items-center text-zinc-950">
         <a href="#" class="group inline-flex items-baseline gap-3">
-            <div class="serif text-xl md:text-2xl italic font-light tracking-wide text-white">
+            <div class="serif text-xl md:text-2xl italic font-light tracking-wide text-zinc-950">
                 P Hazarika
             </div>
-            <div class="hidden sm:block text-[10px] tracking-[0.45em] uppercase text-white/70 group-hover:text-white/90 transition">
+            <div class="hidden sm:block text-[10px] tracking-[0.45em] uppercase text-zinc-950/70 group-hover:text-zinc-950 transition">
                 Design Studio
             </div>
         </a>
-        <div class="hidden md:flex gap-12 text-[10px] tracking-[0.35em] uppercase opacity-70">
-            <a href="#work" class="hover:opacity-100 transition">Work</a>
-            <a href="#capabilities" class="hover:opacity-100 transition">Capabilities</a>
-            <a href="#studio" class="hover:opacity-100 transition">Studio</a>
-            <a href="#contact" class="hover:opacity-100 transition">Contact</a>
+        <div class="hidden md:flex gap-12 text-[10px] tracking-[0.35em] uppercase text-zinc-950/70">
+            <a href="#work" class="hover:text-zinc-950 transition">Work</a>
+            <a href="#capabilities" class="hover:text-zinc-950 transition">Capabilities</a>
+            <a href="#studio" class="hover:text-zinc-950 transition">Studio</a>
+            <a href="#contact" class="hover:text-zinc-950 transition">Contact</a>
         </div>
     </nav>
 
-    <header class="min-h-screen bg-zinc-950 relative overflow-hidden grain">
-        <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.08),rgba(0,0,0,0)_55%)]"></div>
-        <div class="absolute inset-0 opacity-55 bg-[url('images/project-31.jpeg')] bg-cover bg-center"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black/90"></div>
-
+    <header class="min-h-screen relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('images/bgimg.jpeg')] bg-cover bg-center"></div>
+        
+        <div class="absolute inset-0 bg-gradient-to-tr from-white/60 via-white/20 to-transparent"></div>
+    
         <div class="relative z-10 min-h-screen max-w-7xl mx-auto px-6 md:px-10 pt-28 pb-20 flex flex-col justify-end">
             <div class="max-w-3xl">
-                <div class="text-[10px] tracking-[0.45em] uppercase text-white/70">Architecture • Interiors • Hospitality</div>
-                <h1 class="serif text-white text-6xl md:text-8xl italic font-light leading-[0.95] mt-6">
+                <div class="text-[10px] tracking-[0.45em] uppercase text-zinc-800 font-bold">Architecture • Interiors • Hospitality</div>
+                <h1 class="serif text-zinc-950 text-6xl md:text-8xl italic font-light leading-[0.95] mt-6">
                     Architecture <br class="hidden md:block" />that breathes
                 </h1>
-                <p class="text-white/70 mt-8 max-w-xl leading-relaxed text-sm">
+                <p class="text-zinc-800 mt-8 max-w-xl leading-relaxed text-sm font-semibold">
                     Quietly bold, detail-driven spaces that balance function, atmosphere, and craft.
                 </p>
-                <div class="mt-10 flex items-center gap-4">
-                    <a href="#work" class="inline-flex items-center gap-3 bg-white text-zinc-950 px-6 py-3 text-[10px] tracking-[0.35em] uppercase hover:bg-white/90 transition">
-                        View archive <span class="text-base">→</span>
-                    </a>
-                    <a href="#contact" class="inline-flex items-center gap-3 border border-white/30 text-white px-6 py-3 text-[10px] tracking-[0.35em] uppercase hover:bg-white/10 transition">
-                        Contact
-                    </a>
                 </div>
             </div>
-
-            <div class="mt-16 pt-10 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 text-white/70">
-                <div>
-                    <div class="text-[10px] tracking-[0.35em] uppercase">Experience</div>
-                    <div class="serif text-3xl italic text-white mt-2">15+ yrs</div>
-                </div>
-                <div>
-                    <div class="text-[10px] tracking-[0.35em] uppercase">Projects</div>
-                    <div class="serif text-3xl italic text-white mt-2">150+</div>
-                </div>
-                <div>
-                    <div class="text-[10px] tracking-[0.35em] uppercase">Base</div>
-                    <div class="serif text-3xl italic text-white mt-2">Gurugram</div>
-                </div>
-            </div>
-        </div>
     </header>
 
     <section id="principal" class="py-28 md:py-32 bg-[color:var(--bg-paper)]">
@@ -325,21 +309,36 @@
     </section>
 
     <footer id="contact" class="py-20 px-6 md:px-10 bg-[color:var(--bg-paper)]">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-3 gap-12 text-[11px] tracking-[0.35em] uppercase text-zinc-500">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-1 lg:grid-cols-3 gap-12 text-[11px] tracking-[0.35em] uppercase text-zinc-500">
+            
             <div>
                 <p class="text-zinc-900 mb-4 font-bold">Inquiries</p>
-                <a href="mailto:architects.phstudio@gmail.com" class="hover:text-zinc-900 lowercase italic serif text-2xl tracking-normal text-zinc-900">architects.phstudio@gmail.com</a>
-                <p class="mt-4 font-semibold text-zinc-600">+91 9958322388</p>
-                <p class="mt-2 font-semibold text-zinc-600">0124-4114200</p>
+                <a href="mailto:architects.phstudio@gmail.com" class="hover:text-zinc-900 lowercase italic serif text-2xl tracking-normal text-zinc-900 block mb-6">architects.phstudio@gmail.com</a>
+                
+                <div class="space-y-2 font-semibold text-zinc-600">
+                    <a href="https://wa.me/919958322388" target="_blank" class="flex items-center gap-2 hover:text-zinc-900 transition">
+                        WhatsApp: +91 9958322388 <span class="text-[8px]">↗</span>
+                    </a>
+                    <p>Phone: 0124-4114200</p>
+                </div>
+    
+                <div class="mt-8 flex gap-8">
+                    <a href="https://www.instagram.com/hazarika.pankaj2/" target="_blank" class="hover:text-zinc-900 transition border-b border-transparent hover:border-zinc-900 pb-1">Instagram</a>
+                    <a href="https://www.facebook.com/www.architectureph.in/" target="_blank" class="hover:text-zinc-900 transition border-b border-transparent hover:border-zinc-900 pb-1">Facebook</a>
+                </div>
             </div>
-            <div>
+    
+            <div class="lg:text-center">
                 <p class="text-zinc-900 mb-4 font-bold">Office</p>
                 <p class="leading-relaxed">346, Basement Floor,<br>Sector-38, Gurugram</p>
             </div>
-            <div class="md:text-right">
+    
+            <div class="lg:text-right">
                 <p class="text-zinc-900 mb-4 font-bold">Legal</p>
-                <p>GST: 06AUEPB8625L1ZJ</p>
-                <p>UDYAM-HR-05-0033178</p>
+                <div class="space-y-1">
+                    <p>GST: 06AUEPB8625L1ZJ</p>
+                    <p>UDYAM-HR-05-0033178</p>
+                </div>
             </div>
         </div>
     </footer>
@@ -390,7 +389,7 @@
             "21": ["images/project-21.png"],
             "22": ["images/project-22.png", "images/project-22-2.png", "images/project-22-3.png", "images/project-22-4.png"],
             "23": ["images/project-23-1.png", "images/project-23-2.png", "images/project-23-3.png", "images/project-23-4.png"],
-            "24": ["images/project-24.jpg"],
+            "24": ["images/project-24.jpeg"],
             "25": ["images/project-25.jpg"],
             "26": ["images/project-26.png", "images/project-26-2.png", "images/project-26-3.jpg"],
             "27": ["images/project-27-1.jpg", "images/project-27-2.jpg", "images/project-27-3.jpg", "images/project-27-4.png", "images/project-27-5.jpg", "images/project-27-6.png"],
